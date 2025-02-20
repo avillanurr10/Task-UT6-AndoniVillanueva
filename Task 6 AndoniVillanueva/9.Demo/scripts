@@ -1,0 +1,6 @@
+
+       
+// en este archivo voy a ir poniendo los scipts y este es para el dark mode
+document.getElementById("modeToggle").addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+});
