@@ -7,43 +7,60 @@
     <link rel="stylesheet" href="form.css">
 </head>
 <body>
-    <div class="flexbox">
-        <a href="#">Personalizer</a>
-        <a href="#">Form</a>
-        <a href="#">Images</a>
-        <a href="#">Mode</a>
-    </div>
-    <div class="container">
-        <form id="">
-            
-            
-            <label for="fullName">Full Name:</label>
-            <input type="text" id="fullName" placeholder="Enter your full name">
+    <nav>
+        <ul>
+            <li><a href="PersonalitationMenu.html">Personalizer</a></li>
+            <li><a href="form.html">Form</a></li>
+            <li><a href="images.html">Images</a></li>
+            <li><a href="#">Mode</a></li>
+        </ul>
+    </nav>
+    <div class="form-container">
+        <h2>Personal Information</h2>
+        <form id="userForm">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" placeholder="Enter your full name">
             
             <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="Enter your email">
-            <button type="button" onclick="validateEmail()">Validate</button> /* onclick y llamo al script no he empezado aun */
-            <p id="mensajeDeSalida (en un futuro)"></p>
+            <input type="text" id="email" placeholder="Enter your email">
+            <button type="button" onclick="validateEmail()">Validate</button>
+            <p id="emailMessage"></p>
             
             <label>Gender:</label>
-            <input type="radio" name="gender" value=""> Male
-            <input type="radio" name="gender" value=""> Female
-            <input type="radio" name="gender" value=""> Other
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="other"> Other
             
-            <label for="country">Country :</label>
+            <label for="country">Country:</label>
             <select id="country">
-                <option value="">Selecyour country</option>
-                <option value="">Spain</option>
-                <option value="">England</option>
-                <option value="">France</option>
+                <option value="">Select your country</option>
+                <option value="spain">Spain</option>
+                <option value="england">England</option>
+                <option value="france">France</option>
             </select>
             
             <button type="submit">Send</button>
         </form>
     </div>
-    
+    <script> // Puse el script aqui porque es mucho mas comodo y no cambiar de file
+        function validateEmail() {
+            const emailField = document.getElementById("email");
+            const emailMessage = document.getElementById("emailMessage");
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (emailPattern.test(emailField.value)) {
+                emailMessage.style.color = "green";
+                emailMessage.textContent = emailField.value + " is valid :)";
+            } else {
+                emailMessage.style.color = "red";
+                emailMessage.textContent = emailField.value + " is not correct, please retry :(";
+            }
+        }
+    </script>
     <script>
-     (aqui ira el scipt para el correo)  
+        document.getElementById("modeToggle").addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode"); // aun me falta conectar este del modo oscuro
+});
     </script>
 </body>
 </html>
