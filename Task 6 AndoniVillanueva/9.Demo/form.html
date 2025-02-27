@@ -10,16 +10,17 @@
     <nav>
         <ul>
             <li><a href="PersonalitationMenu.html">Personalizer</a></li>
-            <li><a href="form.html">Form</a></li>
+            <li><a href="#">Form</a></li>
             <li><a href="images.html">Images</a></li>
-            <li><a href="#">Mode</a></li>
+            <li><button id="modeToggle"><b>Mode</b></button></li>
         </ul>
     </nav>
+
     <div class="form-container">
         <h2>Personal Information</h2>
         <form id="userForm">
             <label for="fullname">Full Name:</label>
-            <input type="text" id="fullname" placeholder="Enter your full name">
+            <input type="text" id="fullname" placeholder="Enter your full name"> <br> <br>
             
             <label for="email">Email:</label>
             <input type="text" id="email" placeholder="Enter your email">
@@ -42,11 +43,12 @@
             <button type="submit">Send</button>
         </form>
     </div>
-    <script> // Puse el script aqui porque es mucho mas comodo y no cambiar de file
+
+    <script>
         function validateEmail() {
             const emailField = document.getElementById("email");
             const emailMessage = document.getElementById("emailMessage");
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // lo cogi de la IA el pattern
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Patrón de validación
             
             if (emailPattern.test(emailField.value)) {
                 emailMessage.style.color = "green";
@@ -56,11 +58,11 @@
                 emailMessage.textContent = emailField.value + " is not correct, please retry :(";
             }
         }
-    </script>
-    <script>
+        
         document.getElementById("modeToggle").addEventListener("click", function() {
-    document.body.classList.toggle("dark-mode"); // aun me falta conectar este del modo oscuro
-});
+            document.body.classList.toggle("dark-mode");
+            this.textContent = document.body.classList.contains("dark-mode") ? "Light Mode" : "Dark Mode";
+        });
     </script>
 </body>
 </html>
