@@ -46,7 +46,7 @@
         function validateEmail() {
             const emailField = document.getElementById("email");
             const emailMessage = document.getElementById("emailMessage");
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // lo cogi de la IA el pattern
             
             if (emailPattern.test(emailField.value)) {
                 emailMessage.style.color = "green";
