@@ -5,18 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top Navbar</title>
     <link rel="stylesheet" href="PersonalitationMenu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Futura:wght@400&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+
 </head>
 <body>
-
     <div class="navbar">
-        <a href="PersonalitationMenu.html">Personalizer</a>
-        <a href="form.html">Form</a>
-        <a href="images.html">Images</a>
-        <a href="#">Mode</a>
+        <div>
+            <button id="miMenu">Personalizer</button> 
+            <a href="form.html">Form</a>
+            <a href="images.html">Images</a>
+        </div>
+       
     </div>
+
     <div class="text">
-        <h1>Welcome to Personalizer</h1>
-        <p>Club Atlético de Madrid, S.A.D., commonly referred to as Atlético Madrid or simply Atlético, is a Spanish professional football club based in Madrid that plays in La Liga. The club play their home games at the Riyadh Air Metropolitano, which has a capacity of 70,692</p>
+        <h1 id="title">Welcome to Personalizer</h1>
+        <p id="text">Club Atlético de Madrid, S.A.D., commonly referred to as Atlético Madrid or simply Atlético, is a Spanish professional football club based in Madrid that plays in La Liga. The club play their home games at the Riyadh Air Metropolitano, which has a capacity of 70,692</p>
     </div>
+
+    <div class="menu" id="menu">
+        <p>Modificar fondo</p>
+       
+        <button class="color-btn" data-type="bg" data-color="blueviolet" style="background:blueviolet"></button>
+        <button class="color-btn" data-type="bg" data-color="darkcyan" style="background:darkcyan"></button>
+        <button class="color-btn" data-type="bg" data-color="chartreuse" style="background:chartreuse"></button>
+        <p>Modifica el color de la letra, el tamaño y el tipo</p>
+        <button class="color-btn" data-type="text" data-color="red" style="background:red"></button>
+        <button class="color-btn" data-type="text" data-color="green" style="background:green"></button>
+        <button class="color-btn" data-type="text" data-color="blue" style="background:blue"></button><br> 
+        
+        <button class="size-btn" data-size="12px">XS</button>
+        <button class="size-btn" data-size="16px">S</button>
+        <button class="size-btn" data-size="20px">M</button>
+        <button class="size-btn" data-size="24px">L</button>
+        <button class="size-btn" data-size="28px">XL</button><br>
+        
+        <button class="font-btn" data-font="Arial, sans-serif">A</button>
+        <button class="font-btn" data-font="'Times New Roman', serif">T</button>
+        <button class="font-btn" data-font="'Courier New', monospace">C</button>
+        <button class="font-btn" data-font="'Futura', sans-serif">F</button>
+        <button class="font-btn" data-font="'Montserrat', sans-serif">M</button>
+    </div>
+
+    <script>
+      
+    </script>
 </body>
 </html>
