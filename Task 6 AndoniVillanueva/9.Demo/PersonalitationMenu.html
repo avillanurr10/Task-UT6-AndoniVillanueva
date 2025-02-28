@@ -48,7 +48,35 @@
     </div>
 
     <script>
-      
+      document.getElementById("miMenu").addEventListener("click", function() { // esta primera funcion muestro u oculta el menu de personalizacion
+            const menu = document.getElementById("menu");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        });
+
+        document.querySelectorAll(".color-btn").forEach(button => { // Cambia los colores de fondo y texto
+            button.addEventListener("click", function() {
+                if (this.dataset.type === "bg") {
+                    document.body.style.backgroundColor = this.dataset.color;
+                } else if (this.dataset.type === "text") {
+                    document.getElementById("title").style.color = this.dataset.color;
+                    document.getElementById("text").style.color = this.dataset.color;
+                }
+            });
+        });
+
+        document.querySelectorAll(".size-btn").forEach(button => { // cambia el tamaño del texto (fontsize)
+            button.addEventListener("click", function() {
+                document.getElementById("title").style.fontSize = this.dataset.size;
+                document.getElementById("text").style.fontSize = this.dataset.size;
+            });
+        });
+
+        document.querySelectorAll(".font-btn").forEach(button => { //  cambia la letra del texto
+            button.addEventListener("click", function() {
+                document.getElementById("title").style.fontFamily = this.dataset.font;
+                document.getElementById("text").style.fontFamily = this.dataset.font;
+            });
+        });
     </script>
 </body>
 </html>
