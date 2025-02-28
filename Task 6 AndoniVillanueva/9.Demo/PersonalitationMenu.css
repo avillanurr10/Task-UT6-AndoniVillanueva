@@ -89,8 +89,8 @@ body {
     transition: transform 0.2s;
 }
 
-.color-btn:hover, .size-btn:hover, .font-btn:hover {
-    transform: scale(1.1);
+.color-btn:hover, .size-btn:hover, .font-btn:hover { /*el transform aumenta la escala o el tamaño de en este caso el texto y selecciono colorbtn, size...  */
+    transform: scale(1.1);      
 }
 .menu button {
     border: 3px , black; 
