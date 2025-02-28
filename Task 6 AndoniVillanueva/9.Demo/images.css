@@ -1,48 +1,26 @@
-
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
     margin: 0;
     padding: 0;
-    color: black;
+    background-color: white;
+    text-align: center;
 }
 
-/* Modo oscuro */
-body.dark-mode {
-    background-color: black;
-    color: white;
-}
-
-/* Contenedor centrado */
-.form-container {
-    max-width: 600px;
-    margin: 50px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Cambios en modo oscuro para que todas las letras en el dark se pongan blancas */
-body.dark-mode .form-container {
-    background: #222;
-    color: white;
-}
-
-/* Navbar */
 nav {
     background-color: red;
-    padding: 10px 20px;
+    padding: 10px;
     box-shadow: 0 4px 6px black;
-    text-align: center;
+    width: 100%;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    
 }
 
 nav ul li {
@@ -53,66 +31,53 @@ nav ul li a {
     color: white;
     font-weight: bold;
     text-decoration: none;
-    padding: 10px;
+    width: 100%;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 20px;
+    margin-right: 20%;
 }
 
-/* Navbar en modo oscuro para que se ponga todo*/
-body.dark-mode nav {
-    background-color: #333;
+.card {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px black; 
+    text-align: center;
+    width:500px;
+  
 }
 
-body.dark-mode nav ul li a {
-    color: #ddd;
-}
-
-
-label {
-    font-weight: bold;
-    display: block;
+img {
+    width: 120px;
+    height: auto;
     margin-top: 10px;
 }
 
-input, select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-/* Inputs en modo oscuro */
-body.dark-mode input,
-body.dark-mode select {
-    background-color: #333;
-    color: white;
-    border: 1px solid #555;
-}
-
-/* Botones */
 button {
-    width: 100%;
     padding: 10px;
-    margin-top: -9px; /* Alineado con los demás */
+    background: red;
+    color: white;
     border: none;
-    border-radius: 4px;
-    background-color: #ff0000;
-    color: white;
     cursor: pointer;
+    font-size: 16px;
+    margin-top: -8px;
+    border-radius: 5px;
 }
 
-/* Botones en modo oscuro */
-body.dark-mode button {
-    background-color: #555;
+button:hover {
+    background: blue;
+}
+
+body.dark-mode {
+    background-color: black;
     color: white;
 }
-
-/* Opciones de género */
-.gender-options {
-    display: flex;
-    gap: 10px;
-    margin-top: 5px;
+h2{
+    color: black;
 }
